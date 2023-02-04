@@ -1,0 +1,8 @@
+Item:
+   -outil:
+        -améthyste 
+        -cuivre 
+   -armure:
+        -améthyste 
+        -cuivre 
+   -
