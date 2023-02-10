@@ -5,4 +5,5 @@ Item:
    -armure:
         -améthyste 
         -cuivre 
-   -
+   -arme:
+        -Bâton de Zeus
