@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "*": {
+      "item": "minecraft:amethyst_shard"
+    }
+  },
+  "pattern": [
+    "*",
+    "*",
+    "#"
+  ],
+  "result": {
+    "item": "betterminecraft:amethyst_sword"
+  }
+}

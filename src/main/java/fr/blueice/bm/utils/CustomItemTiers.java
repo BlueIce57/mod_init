@@ -6,7 +6,13 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 public enum CustomItemTiers implements Tier {
 
-    AMETHYSM(8, 3060, 16.0F, 8.0F, 25, new LazyLoadedValue<>(() -> {
+
+
+    COPPER(8, 3160, 16.0F, 6.0F, 25, new LazyLoadedValue<>(() -> {
+        return Ingredient.of(Items.COPPER_INGOT);
+    })),
+
+    AMETHYSM(6, 3060, 16.0F, 10.0F, 25, new LazyLoadedValue<>(() -> {
         return Ingredient.of(Items.AMETHYST_SHARD);
     }));
    private final int harvestLevel;

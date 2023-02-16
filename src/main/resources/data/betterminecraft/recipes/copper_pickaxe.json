@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "+": {
+      "item": "betterminecraft:copper_stick"
+    },
+    "/": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "pattern": [
+    "///",
+    " + ",
+    " + "
+  ],
+  "result": {
+    "item": "betterminecraft:copper_pickaxe"
+  }
+}

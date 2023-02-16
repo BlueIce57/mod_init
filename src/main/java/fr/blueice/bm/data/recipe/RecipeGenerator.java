@@ -26,14 +26,23 @@ public class RecipeGenerator extends RecipeProvider implements IConditionBuilder
                 .pattern("#")
                 .define('#', Items.STICK)
                 .define('*', Items.AMETHYST_SHARD)
-                .unlockedBy("unlock", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STICK, Items.AMETHYST_SHARD))
+                .unlockedBy("unlock_amethyst_sword", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STICK, Items.AMETHYST_SHARD))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(ModItems.COPPER_STICK.get())
-                .pattern(" * ")
-                .pattern(" * ")
+                .pattern("*")
+                .pattern("*")
                 .define('*', Items.COPPER_INGOT)
-                .unlockedBy("unlock", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COPPER_INGOT))
+                .unlockedBy("unlock_copper_stick", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COPPER_INGOT))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(ModItems.COPPER_PICKAXE.get())
+                .pattern("///")
+                .pattern(" + ")
+                .pattern(" + ")
+                .define('/', Items.COPPER_INGOT)
+                .define('+', ModItems.COPPER_STICK.get())
+                .unlockedBy("unlock_copper_pickaxe", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COPPER_INGOT, ModItems.COPPER_STICK.get()))
                 .save(consumer);
     }
 }
