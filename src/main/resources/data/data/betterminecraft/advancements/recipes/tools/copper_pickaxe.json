@@ -1,0 +1,39 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "betterminecraft:copper_pickaxe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "unlock_copper_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:copper_ingot"
+            ]
+          },
+          {
+            "items": [
+              "betterminecraft:copper_stick"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "unlock_copper_pickaxe",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "betterminecraft:copper_pickaxe"
+    ]
+  }
+}

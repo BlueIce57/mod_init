@@ -1,7 +1,9 @@
 package fr.blueice.bm;
 
-import fr.blueice.bm.data.recipe.RecipeGenerator;
-import fr.blueice.bm.init.ModItems;
+import fr.blueice.bm.items.ModItems;
+import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.data.Main;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -29,6 +31,8 @@ public class betterminecraft {
 
     private void clientSetup(FMLClientSetupEvent e)
     {
-
+        ItemProperties.register(ModItems.COPPER_STICK.get(), new ResourceLocation("betterminecraft", "oxydation"), (stack, level, livingEntity, id) -> {
+            return stack.getOrCreateTag().getBoolean("oxydation") ? 1.0f : 0.0f;
+    });
     }
 }

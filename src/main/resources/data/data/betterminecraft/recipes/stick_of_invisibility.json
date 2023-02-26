@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "*": {
+      "item": "betterminecraft:copper_stick"
+    },
+    "+": {
+      "item": "minecraft:blaze_powder"
+    },
+    "/": {
+      "item": "minecraft:fermented_spider_eye"
+    },
+    "=": {
+      "item": "minecraft:nether_wart"
+    }
+  },
+  "pattern": [
+    " =/",
+    " *+",
+    "*  "
+  ],
+  "result": {
+    "item": "betterminecraft:stick_of_invisibility"
+  }
+}

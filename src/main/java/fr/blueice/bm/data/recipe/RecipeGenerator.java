@@ -1,6 +1,6 @@
 package fr.blueice.bm.data.recipe;
 
-import fr.blueice.bm.init.ModItems;
+import fr.blueice.bm.items.ModItems;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -43,6 +43,19 @@ public class RecipeGenerator extends RecipeProvider implements IConditionBuilder
                 .define('/', Items.COPPER_INGOT)
                 .define('+', ModItems.COPPER_STICK.get())
                 .unlockedBy("unlock_copper_pickaxe", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COPPER_INGOT, ModItems.COPPER_STICK.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(ModItems.STICK_OF_INVISIBILITY.get())
+                .pattern(" =/")
+                .pattern(" *+")
+                .pattern("*  ")
+
+                .define('=', Items.NETHER_WART)
+                .define('+', Items.BLAZE_POWDER)
+                .define('*', ModItems.COPPER_STICK.get())
+                .define('/', Items.FERMENTED_SPIDER_EYE)
+
+                .unlockedBy("unlock_invisibility_stick", InventoryChangeTrigger.TriggerInstance.hasItems((ModItems.COPPER_STICK.get())))
                 .save(consumer);
     }
 }

@@ -1,6 +1,24 @@
 {
-  "parent": "item/handheld",
+  "parent": "minecraft:item/handheld",
   "textures": {
     "layer0": "betterminecraft:item/copper_pickaxe"
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "betterminecraft:oxydation": 0.66
+      },
+      "model": "betterminecraft:item/copper_pickaxe4",
+
+      "predicate": {
+        "betterminecraft:oxydation": 0.33
+      },
+      "model": "betterminecraft:item/copper_pickaxe3",
+
+      "predicate": {
+        "betterminecraft:oxydation": 0.0
+      },
+      "model": "betterminecraft:item/copper_pickaxe2"
+    }
+  ]
 }

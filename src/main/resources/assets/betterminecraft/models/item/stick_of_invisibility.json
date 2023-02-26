@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "betterminecraft:item/stick_of_invisibility"
+  }
+}

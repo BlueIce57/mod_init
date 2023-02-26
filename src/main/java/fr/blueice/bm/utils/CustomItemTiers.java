@@ -8,11 +8,11 @@ public enum CustomItemTiers implements Tier {
 
 
 
-    COPPER(8, 3160, 16.0F, 6.0F, 25, new LazyLoadedValue<>(() -> {
+    COPPER(4, 3160, 11.0F, 4.0F, 25, new LazyLoadedValue<>(() -> {
         return Ingredient.of(Items.COPPER_INGOT);
     })),
 
-    AMETHYSM(6, 3060, 16.0F, 10.0F, 25, new LazyLoadedValue<>(() -> {
+    AMETHYSM(3, 3060, 8.0F, 10.0F, 25, new LazyLoadedValue<>(() -> {
         return Ingredient.of(Items.AMETHYST_SHARD);
     }));
    private final int harvestLevel;
